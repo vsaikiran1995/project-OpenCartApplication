@@ -4,15 +4,10 @@ formatter.feature({
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Login Test with Registered User",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@Sanity"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -22,27 +17,47 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "stepDefs.RegistrationNewUserStepDef.as_a_user_I_will_Navigate_to_Registration_URL(java.lang.String)"
+  "location": "stepDefs.RegistrationStepDef.as_a_user_I_will_Navigate_to_Registration_URL(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "login with invalid password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@WIP"
+    }
+  ]
+});
 formatter.step({
-  "name": "As a user I will enter UserName as \"Test05@gmail.com\" and Password as \"Test05\"",
+  "name": "user enter valid username \"Test05@gmail.com\" and invalid password as \"cyx\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefs.LoginStepDef.as_a_user_I_will_enter_UserName_as_and_Password_as(java.lang.String,java.lang.String)"
+  "location": "stepDefs.LoginStepDef.user_enter_valid_username_and_invalid_password_as(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "As a user validate login is successfull",
+  "name": "user click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "stepDefs.LoginStepDef.user_click_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see an error message indicating invalid password",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefs.LoginStepDef.as_a_user_validate_login_is_successfull()"
+  "location": "stepDefs.LoginStepDef.user_should_see_an_error_message_indicating_invalid_password()"
 });
 formatter.result({
   "status": "passed"
