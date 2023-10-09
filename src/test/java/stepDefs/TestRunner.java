@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		features="src/test/java/features",
 		plugin ={"pretty","html:target/html-cucumber"},
 		glue="stepDefs",
-		tags= {"@Sanity"}
+		tags= {"@WIP"}
 		
 		)
 public class TestRunner {
