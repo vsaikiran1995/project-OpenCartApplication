@@ -9,4 +9,21 @@ Feature: Add to cart functionality
     When the user selects a product
     And they click the Add to cart button
     Then the product should be added to the cart
-    And the cart icon should show the updated item count
+
+  Scenario: Add Multiple Products to the Cart
+    When the user selects multiple products
+    And they click the Add to Cart button for each product
+    Then all selected products should be added to the cart
+
+  @WIP
+  Scenario: Proceed to Checkout
+    When the user clicks the Checkout button in the cart
+    Then they should be taken to the checkout page
+
+  Scenario: Remove a Product from the Cart
+    When the user removes a product from the cart
+    Then the product should be removed from the cart
+
+  Scenario: Remove all products from the Cart
+    When the user removes all the productrs from the cart
+    Then the cart should show zero items

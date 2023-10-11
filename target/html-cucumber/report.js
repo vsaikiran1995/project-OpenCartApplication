@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/AddToCart.feature");
 formatter.feature({
-  "name": "Verify login functionality",
+  "name": "Add to cart functionality",
   "description": "",
   "keyword": "Feature"
 });
@@ -22,8 +22,28 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
+formatter.step({
+  "name": "As a user I will enter UserName as \"Test05@gmail.com\" and Password as \"Test05\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepDefs.LoginStepDef.as_a_user_I_will_enter_UserName_as_and_Password_as(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "As a user validate login is successfull",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefs.LoginStepDef.as_a_user_validate_login_is_successfull()"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.scenario({
-  "name": "login with invalid password",
+  "name": "Proceed to Checkout",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -33,31 +53,21 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user enter valid username \"Test05@gmail.com\" and invalid password as \"cyx\"",
+  "name": "the user clicks the Checkout button in the cart",
   "keyword": "When "
 });
 formatter.match({
-  "location": "stepDefs.LoginStepDef.user_enter_valid_username_and_invalid_password_as(java.lang.String,java.lang.String)"
+  "location": "stepDefs.AddToCartSetpDef.the_user_clicks_the_Checkout_button_in_the_cart()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefs.LoginStepDef.user_click_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see an error message indicating invalid password",
+  "name": "they should be taken to the checkout page",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefs.LoginStepDef.user_should_see_an_error_message_indicating_invalid_password()"
+  "location": "stepDefs.AddToCartSetpDef.they_should_be_taken_to_the_checkout_page()"
 });
 formatter.result({
   "status": "passed"
