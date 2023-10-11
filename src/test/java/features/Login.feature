@@ -17,7 +17,6 @@ Feature: Verify login functionality
     And user click on login button
     Then user should see an error message indicating invalid username
 
-  
   Scenario: login with invalid password
     When user enter valid username "Test05@gmail.com" and invalid password as "cyx"
     And user click on login button
