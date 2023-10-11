@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		dryRun=false,
+		dryRun=true,
 		monochrome=true,
 		features="src/test/java/features",
 		plugin ={"pretty","html:target/html-cucumber"},

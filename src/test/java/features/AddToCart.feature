@@ -26,8 +26,9 @@ Feature: Add to cart functionality
   Scenario: Remove all products from the Cart
     When the user removes all the productrs from the cart
     Then the cart should show zero items
-    @WIP
-    Scenario: Add a Not available product to the cart
+
+  @WIP
+  Scenario: Add a Not available product to the cart
     When the user selects a product
     Then the user clicks add to cart button
     And product should not added in the cart

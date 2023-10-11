@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/AddToCart.feature");
 formatter.feature({
-  "name": "Verify login functionality",
+  "name": "Add to cart functionality",
   "description": "",
   "keyword": "Feature"
 });
@@ -10,7 +10,7 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.before({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "As a user I will Navigate to Registration URL \"https://naveenautomationlabs.com/opencart/\"",
@@ -20,10 +20,30 @@ formatter.match({
   "location": "stepDefs.RegistrationStepDef.as_a_user_I_will_Navigate_to_Registration_URL(java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.step({
+  "name": "As a user I will enter UserName as \"Test05@gmail.com\" and Password as \"Test05\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepDefs.LoginStepDef.as_a_user_I_will_enter_UserName_as_and_Password_as(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "As a user validate login is successfull",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefs.LoginStepDef.as_a_user_validate_login_is_successfull()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.scenario({
-  "name": "login with invalid password",
+  "name": "Add a Not available product to the cart",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -33,36 +53,30 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "user enter valid username \"Test05@gmail.com\" and invalid password as \"cyx\"",
+  "name": "the user selects a product",
   "keyword": "When "
 });
-formatter.match({
-  "location": "stepDefs.LoginStepDef.user_enter_valid_username_and_invalid_password_as(java.lang.String,java.lang.String)"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.step({
-  "name": "user click on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "stepDefs.LoginStepDef.user_click_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should see an error message indicating invalid password",
+  "name": "the user clicks add to cart button",
   "keyword": "Then "
 });
-formatter.match({
-  "location": "stepDefs.LoginStepDef.user_should_see_an_error_message_indicating_invalid_password()"
-});
+formatter.match({});
 formatter.result({
-  "status": "passed"
+  "status": "undefined"
+});
+formatter.step({
+  "name": "product should not added in the cart",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.after({
-  "status": "passed"
+  "status": "skipped"
 });
 });
